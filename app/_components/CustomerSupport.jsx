@@ -45,8 +45,8 @@ const CustomerSupport = () => {
               // "model": "meta-llama/llama-3.1-405b",
               "model": "meta-llama/llama-3.1-8b-instruct:free",
               "messages": [
-                {"role": "system", "content": 'Clothing Brand KINGSMAN Customer Support.'},
-                {"role": "user", "content": `${input}`},
+                // {"role": "system", "content": 'Clothing Brand KINGSMAN Customer Support.'},
+                {"role": "user", "content": `Clothing Brand KINGSMAN Customer Support.${input}`},
                 {"max_tokens": 10  }
               ],
             })
