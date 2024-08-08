@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomerSupport from '../_components/CustomerSupport'
+import CustomerSupport from '../components/CustomerSupport'
 
 const page = () => {
   return (

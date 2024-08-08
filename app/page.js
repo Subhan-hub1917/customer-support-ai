@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Chatbox from "./_components/Chatbox";
+import Chatbox from "./components/Chatbox";
 // import Chatbox from "./_components/Chatbox"; 
 
 export default function Home() {
