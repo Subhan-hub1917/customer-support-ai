@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import Chatbox from "./_components/chatbox"; 
+import Chatbox from "./_components/Chatbox";
+// import Chatbox from "./_components/Chatbox"; 
 
 export default function Home() {
   return (
@@ -29,9 +30,9 @@ export default function Home() {
           <div className="w-full h-full md:w-1/2 overflow-hidden flex flex-col items-center text-center relative">
             <div className="absolute top-36 md:top-48 z-10 w-full h-full rounded-full bg-orange-300"></div>
             <img src="/istockphoto-907865186-612x612-removebg-preview.png" alt="DEVENGER" className="relative md:absolute md:bottom-0 lg:relative drop-shadow-lg object-fill z-20 w-full" />
-            <div className="absolute bottom-10 md:bottom-28 z-30 space-x-2 rounded-full px-3 py-2 border border-white">
-              {/* <Link href="/customersupport"><button className="text-white bg-orange-600 text-sm rounded-2xl px-3 py-2">Customer Support<i className="ms-2 bi bi-arrow-up-right"></i></button></Link> */}
-              <div class="fixed bottom-0 right-0 mb-4 mr-4">
+            <div className="flex  absolute bottom-10 md:bottom-28 z-30 space-x-2 rounded-full px-3 py-2 border border-white">
+              <Link href="/customersupport"><button className="block md:hidden text-white bg-orange-600 text-sm rounded-2xl px-3 py-2">Customer Support<i className="ms-2 bi bi-arrow-up-right"></i></button></Link>
+              <div className="hidden md:block fixed bottom-0 right-0 mb-4 mr-4">Github
                 <Chatbox />
               </div>
               <a href="https://github.com/Subhan-hub1917/customer_support" target="_blank"><button className="text-white bg-transparent text-sm rounded-2xl px-3 py-2">Github</button></a>

@@ -88,11 +88,11 @@ const Chatbox = () => {
             {isChatboxOpen && (
                 <div
                     id="chat-container"
-                    className={`fixed bottom-16 right-4 w-96 transition-opacity duration-900 ease-in-out ${isChatboxOpen ? "opacity-100" : "opacity-0"
+                    className={` fixed bottom-16 right-4 w-96 transition-opacity duration-900 ease-in-out ${isChatboxOpen ? "opacity-100" : "opacity-0"
                         }`}
                     style={{ visibility: isChatboxOpen ? "visible" : "hidden" }}
                 >
-                    <div className="bg-white shadow-2xl rounded-lg max-w-lg w-full overflow-hidden">
+                    <div className="bg-white shadow-2xl rounded-lg border border-orange-500 max-w-lg w-full overflow-hidden">
                         <div className="p-4 border-b bg-orange-500 text-white rounded-t-lg flex justify-between items-center">
                             <div className="flex flex-row justify-start align-middle">
                                 <p className="text-lg font-semibold mx-3.5">SilkBot</p>
@@ -159,13 +159,13 @@ const Chatbox = () => {
                             )}
                             <form
                                 onSubmit={handleQuery}
-                                className="w-full flex items-center justify-between space-x-3"
+                                className="w-full flex items-center justify-between space-x-3 "
                             >
                                 <input
                                     id="user-input"
                                     type="text"
                                     placeholder="Type a message"
-                                    className="w-full px-3 py-2 border rounded-l-full focus:outline-none focus:ring-2 focus:ring-orange-600"
+                                    className="w-full px-3 py-2 border rounded-l-full  border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600"
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                 />

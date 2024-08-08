@@ -70,36 +70,58 @@ const CustomerSupport = () => {
       }
     return (
         <main className="relative top-0 h-screen py-0 overflow-hidden z-50">
-          <section className='backdrop-blur-lg h-screen flex flex-col items-center bg-indigo-950  md:bg-white justify-center'>
-              <div className='text-2xl py-3 md:text-5xl px-5 font-semibold my-1 md:bg-transparent md:text-indigo-950 bg-indigo-950 text-white'><Link href="/" className=" me-3 bi bi-arrow-left"></Link>Customer Support AI</div>
+          <section className='backdrop-blur-lg h-screen flex flex-col items-center bg-orange-700  md:bg-white justify-center'>
+              <div className='text-2xl py-3 md:text-5xl px-5 font-semibold my-1 md:bg-transparent md:text-indigo-950 bg-orange-700 text-white'><Link href="/" className=" me-3 bi bi-arrow-left"></Link>SilkBot</div>
               <div className=" md:border overflow-hidden bg-white md:border-black my-0 md:my-3 rounded-xl h-full w-screen  md:w-1/2  flex flex-col items-center justify-between">
                   {/* message sections */}
                   <div className="overflow-y-auto overflow-x-hidden rounded-xl py-2 px-2 w-full max-h-full bg-white">
-                  {
-                    messages.map((m)=>(
-                      <div key={m.role} className={` my-1 ${m.role=='user' ?'text-right':'text-left'}`}>
-                          {/* <p className={`text-sm p-2 inline-block text-white ${m.role=='user'?'bg-slate-500 text-black text-end rounded-s-2xl rounded-b-2xl':'bg-blue-700 text-left rounded-e-2xl rounded-b-2xl'}`}> */}
-                            <Markdown  className={`text-sm p-2 inline-block text-white ${m.role=='user'?'bg-slate-500 text-black text-end rounded-s-2xl rounded-b-2xl':'bg-blue-700 text-left rounded-e-2xl rounded-b-2xl'}`}>
-                              {m.content}
-                            </Markdown>
-                          {/* </p> */}
-                      </div>
-    
-                  ))
-                }
+                  {messages.map((m, index) => (
+                                <div
+                                    key={index}
+                                    className={`my-1 flex items-start ${m.role === "user" ? "justify-end" : "justify-start"}`}
+                                >
+                                    {m.role === "user" ? (
+                                        <>
+                                            <Markdown
+                                                className={`text-sm p-2 inline-block text-white bg-slate-500 text-end rounded-s-2xl rounded-b-2xl`}
+                                            >
+                                                {m.content}
+                                            </Markdown>
+                                            <img
+                                                src="/profile.png"
+                                                alt="User Icon"
+                                                className="w-8 h-8 ml-2"
+                                            />
+                                        </>
+                                    ) : m.role === "system" && (
+                                        <>
+                                            <img
+                                                src="/service.png"
+                                                alt="Chatbot Icon"
+                                                className="w-8 h-8 mr-2"
+                                            />
+                                            <Markdown
+                                                className={`text-sm p-2 inline-block text-white bg-orange-500 text-left mt-2 mb-2 rounded-e-2xl rounded-b-2xl`}
+                                            >
+                                                {m.content}
+                                            </Markdown>
+                                        </>
+                                    )}
+                                </div>
+                            ))}
                     <div ref={messagesRef} />
                   </div>
                   {/* prompt section */}
-                  <div className="w-full py-3 px-3 rounded-t-lg bg-indigo-950">
+                  <div className="w-full py-3 px-3 rounded-t-lg bg-orange-700">
                     {/* <div className="w-full flex items-center justify-between space-x-3"> */}
                     <form onSubmit={handleQuery} className="w-full flex items-center justify-between space-x-3">
                       <input
                         placeholder="Write your query here..."
-                        className="h-10 w-full rounded-lg px-3"
+                        className="text-black h-10 w-full rounded-lg px-3"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                       />
-                      <button type="submit" className="bi bi-send rounded-lg bg-blue-600 py-2 px-4 text-white text-lg"></button>
+                      <button type="submit" className="bi bi-send-fill rounded-lg bg-white py-2 px-4 text-orange-700 text-lg"></button>
                     </form>
                     {/* </div> */}
           {
