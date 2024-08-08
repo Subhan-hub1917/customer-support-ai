@@ -10,6 +10,7 @@ const CustomerSupport = () => {
       })
       const messagesRef=useRef(null);
       const [input,setInput]=useState('')
+      const [loading,setLoading]=useState(false)   
       const [messages,setMessages]=useState([
         { role:'system',
           content:'Hi! How can i assist you?'
@@ -28,6 +29,7 @@ const CustomerSupport = () => {
         if(input==''){
           return
         }
+        setLoading(true)
         setQuery(prev=>({...prev,content:input}))
         query.content=input
         setMessages(prev=>[...prev,query])
@@ -36,20 +38,21 @@ const CustomerSupport = () => {
           const res= await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
             headers: {
-              "Authorization": `Bearer ${process.env.OPEN_API_KEY}`,
+              "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPEN_API_KEY}`,
               "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              "model": "meta-llama/llama-3.1-405b",
-              // "model": "meta-llama/llama-3.1-8b-instruct:free",
+              // "model": "meta-llama/llama-3.1-405b",
+              "model": "meta-llama/llama-3.1-8b-instruct:free",
               "messages": [
-                {"role": "system", "content": ''},
+                {"role": "system", "content": 'Clothing Brand KINGSMAN Customer Support.'},
                 {"role": "user", "content": `${input}`},
                 {"max_tokens": 10  }
               ],
             })
           });
           if (!res.ok) {
+            setLoading(false)
             const errorText = await res.text(); 
             throw new Error(`Network response was not ok: ${errorText}`);
           }
@@ -59,7 +62,7 @@ const CustomerSupport = () => {
             content:result.choices[0].message.content
           }
           setMessages(prev=>[...prev,systemResponse])
-        
+          setLoading(false)
         }
         catch(error){
           alert(`Erorr Requesting to Model ${error.message}`)
@@ -89,15 +92,22 @@ const CustomerSupport = () => {
                   {/* prompt section */}
                   <div className="w-full py-3 px-3 rounded-t-lg bg-indigo-950">
                     {/* <div className="w-full flex items-center justify-between space-x-3"> */}
-                      <form onSubmit={(e)=>handleQuery(e)} className="w-full flex items-center justify-between space-x-3">
-                        <input placeholder="Write your query here..."
-                          className="h-10 w-full rounded-lg px-3"
-                          value={input}
-                          onChange={(e)=>setInput(e.target.value)}
-                          />
-                        <button type="submit" className="bi bi-send rounded-lg bg-blue-600 py-2 px-4 text-white text-lg "></button>
-                      </form>
+                    <form onSubmit={handleQuery} className="w-full flex items-center justify-between space-x-3">
+                      <input
+                        placeholder="Write your query here..."
+                        className="h-10 w-full rounded-lg px-3"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                      />
+                      <button type="submit" className="bi bi-send rounded-lg bg-blue-600 py-2 px-4 text-white text-lg"></button>
+                    </form>
                     {/* </div> */}
+          {
+            loading &&
+            <div className="relative flex items-center justify-center bottom-28  z-50 text-center">
+              <div className="bg-green-500 text-white rounded-xl px-3">Generating Response...</div>
+          </div>
+          }
                   </div>
               </div>
           </section>
