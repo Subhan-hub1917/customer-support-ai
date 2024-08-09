@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Chatbox from "./components/Chatbox";
-// import Chatbox from "./_components/Chatbox"; 
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
       {/* Body Section */}
       <section className="h-full flex flex-col  mt-2 items-center ">
         <div className="text-center h-1/4 text-3xl space-y-1 font-bold">
-          <h1>We are <span className="text-orange-500">KINGSMAN</span></h1>
+          <h1>We are <span className="text-orange-500">Fashion Heaven</span></h1>
           <h1>Clothing Brand</h1>
         </div>
         {/* main section */}
@@ -27,15 +26,20 @@ export default function Home() {
             <p>"Empowering gentlemen and young lads with impeccably tailored, custom three-piece suits that embody elegance, confidence, and timeless style."</p>
           </div>
           {/* Image Section */}
-          <div className="w-full h-full md:w-1/2 overflow-hidden flex flex-col items-center text-center relative">
-            <div className="absolute top-36 md:top-48 z-10 w-full h-full rounded-full bg-orange-300"></div>
-            <img src="/istockphoto-907865186-612x612-removebg-preview.png" alt="DEVENGER" className="relative md:absolute md:bottom-0 lg:relative drop-shadow-lg object-fill z-20 w-full" />
-            <div className="flex  absolute bottom-10 md:bottom-28 z-30 space-x-2 rounded-full px-3 py-2 border border-white">
+          <div className="w-full h-full md:w-1/2 overflow-hidden flex flex-col items-center text-center relative ">
+            <img src="/man.png" alt="DEVENGER" className="relative md:absolute md:bottom-0 lg:relative drop-shadow-lg object-fill z-20 w-full" />
+            <div className="flex  absolute bottom-10 md:bottom-28 z-30 space-x-2 rounded-full px-3 py-2 border bg-black hover:bg-gray-800 border-white">
               <Link href="/customersupport"><button className="block md:hidden text-white bg-orange-600 text-sm rounded-2xl px-3 py-2">SilkBot<i className="ms-2 bi bi-arrow-up-right"></i></button></Link>
-              <div className="hidden md:block fixed bottom-0 right-0 mb-4 mr-4">Github
+              <div className="hidden md:block fixed bottom-0 right-0 mb-4 mr-4">
                 <Chatbox />
               </div>
-              <a href="https://github.com/Subhan-hub1917/customer_support" target="_blank"><button className="text-white bg-transparent text-sm rounded-2xl px-3 py-2">Github</button></a>
+              <a href="https://github.com/Subhan-hub1917/customer_support" target="_blank" className="flex items-center">
+                <button className="flex items-center text-white text-sm rounded-2xl px-3 py-2">
+                  <img src="/github icon.png" className="w-6 h-6 mr-2 bg-white" alt="GitHub icon" />
+                  <span>Github</span>
+                </button>
+              </a>
+
             </div>
           </div>
           <div className="hidden md:block text-end w-1/4">

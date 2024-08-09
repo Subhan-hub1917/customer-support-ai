@@ -1,0 +1,246 @@
+[
+    {
+        "products": [
+            {
+                "id": 101,
+                "name": "Classic White Shirt",
+                "description": "A versatile white shirt made from 100% cotton. Available in various sizes.",
+                "sizes": ["S", "M", "L", "XL"],
+                "colors": ["White"],
+                "fabric": "100% Cotton",
+                "price": "$35",
+                "sku": "CW101",
+                "availability": "In Stock"
+            },
+            {
+                "id": 102,
+                "name": "Silk Evening Gown",
+                "description": "A luxurious silk gown perfect for formal occasions. Available in multiple colors.",
+                "sizes": ["XS", "S", "M", "L"],
+                "colors": ["Red", "Black", "Blue"],
+                "fabric": "100% Silk",
+                "price": "$150",
+                "sku": "SEG102",
+                "availability": "Limited Stock"
+            },
+            {
+                "id": 103,
+                "name": "Denim Jacket",
+                "description": "A classic denim jacket for casual wear. Features a button-down front and two chest pockets.",
+                "sizes": ["S", "M", "L", "XL"],
+                "colors": ["Blue", "Black"],
+                "fabric": "100% Cotton Denim",
+                "price": "$80",
+                "sku": "DJ103",
+                "availability": "In Stock"
+            },
+            {
+                "id": 104,
+                "name": "Linen Summer Dress",
+                "description": "A light and airy linen dress perfect for summer days. Available in soft pastel colors.",
+                "sizes": ["XS", "S", "M", "L"],
+                "colors": ["Pink", "Yellow", "White"],
+                "fabric": "100% Linen",
+                "price": "$65",
+                "sku": "LSD104",
+                "availability": "In Stock"
+            },
+            {
+                "id": 105,
+                "name": "Woolen Overcoat",
+                "description": "A warm woolen overcoat ideal for winter wear. Tailored fit with a double-breasted front.",
+                "sizes": ["M", "L", "XL", "XXL"],
+                "colors": ["Gray", "Navy", "Black"],
+                "fabric": "80% Wool, 20% Polyester",
+                "price": "$200",
+                "sku": "WO105",
+                "availability": "Limited Stock"
+            },
+            {
+                "id": 106,
+                "name": "Cotton T-Shirt",
+                "description": "A comfortable cotton T-shirt available in various colors. Perfect for everyday wear.",
+                "sizes": ["S", "M", "L", "XL"],
+                "colors": ["White", "Black", "Gray", "Blue"],
+                "fabric": "100% Cotton",
+                "price": "$20",
+                "sku": "CT106",
+                "availability": "In Stock"
+            },
+            {
+                "id": 107,
+                "name": "Chiffon Maxi Dress",
+                "description": "A flowing chiffon maxi dress ideal for evening events. Features a high neckline and long sleeves.",
+                "sizes": ["S", "M", "L"],
+                "colors": ["Red", "Emerald Green", "Navy"],
+                "fabric": "100% Chiffon",
+                "price": "$120",
+                "sku": "CMD107",
+                "availability": "Limited Stock"
+            },
+            {
+                "id": 108,
+                "name": "Leather Biker Jacket",
+                "description": "A stylish leather biker jacket with zippered pockets and a belted waist. A must-have for fashion-forward individuals.",
+                "sizes": ["M", "L", "XL"],
+                "colors": ["Black", "Brown"],
+                "fabric": "100% Genuine Leather",
+                "price": "$250",
+                "sku": "LBJ108",
+                "availability": "In Stock"
+            },
+            {
+                "id": 109,
+                "name": "Floral Print Skirt",
+                "description": "A knee-length floral print skirt with a flared silhouette. Perfect for spring outings.",
+                "sizes": ["XS", "S", "M", "L"],
+                "colors": ["Floral"],
+                "fabric": "95% Cotton, 5% Spandex",
+                "price": "$45",
+                "sku": "FPS109",
+                "availability": "In Stock"
+            },
+            {
+                "id": 110,
+                "name": "Cashmere Sweater",
+                "description": "A soft cashmere sweater available in rich colors. Features a V-neck and ribbed cuffs.",
+                "sizes": ["S", "M", "L", "XL"],
+                "colors": ["Burgundy", "Gray", "Cream"],
+                "fabric": "100% Cashmere",
+                "price": "$180",
+                "sku": "CS110",
+                "availability": "Limited Stock"
+            },
+            {
+                "id": 111,
+                "name": "High-Waisted Jeans",
+                "description": "A pair of high-waisted jeans with a slim fit. Available in classic denim washes.",
+                "sizes": ["XS", "S", "M", "L", "XL"],
+                "colors": ["Light Blue", "Dark Blue", "Black"],
+                "fabric": "98% Cotton, 2% Elastane",
+                "price": "$70",
+                "sku": "HWJ111",
+                "availability": "In Stock"
+            },
+            {
+                "id": 112,
+                "name": "Silk Scarf",
+                "description": "A luxurious silk scarf with intricate patterns. Can be worn as an accessory with any outfit.",
+                "sizes": ["One Size"],
+                "colors": ["Red", "Gold", "Blue"],
+                "fabric": "100% Silk",
+                "price": "$55",
+                "sku": "SS112",
+                "availability": "In Stock"
+            }
+        ]
+    },
+    {
+        "pricing_discounts": [
+            {
+                "product_id": 101,
+                "name": "Classic White Shirt",
+                "original_price": "$35",
+                "discount_price": "$28",
+                "discount_code": "SUMMER21",
+                "promotion_period": "June 1 - June 30"
+            },
+            {
+                "product_id": 102,
+                "name": "Silk Evening Gown",
+                "original_price": "$150",
+                "discount_price": "$120",
+                "discount_code": "ELEGANCE20",
+                "promotion_period": "July 15 - July 31"
+            },
+            {
+                "product_id": 103,
+                "name": "Denim Jacket",
+                "original_price": "$80",
+                "discount_price": "$65",
+                "discount_code": "DENIM15",
+                "promotion_period": "August 1 - August 15"
+            },
+            {
+                "product_id": 104,
+                "name": "Linen Summer Dress",
+                "original_price": "$65",
+                "discount_price": "$52",
+                "discount_code": "SUMMERLINEN",
+                "promotion_period": "June 1 - June 30"
+            },
+            {
+                "product_id": 105,
+                "name": "Woolen Overcoat",
+                "original_price": "$200",
+                "discount_price": "$160",
+                "discount_code": "WINTER20",
+                "promotion_period": "December 1 - December 31"
+            },
+            {
+                "product_id": 106,
+                "name": "Cotton T-Shirt",
+                "original_price": "$20",
+                "discount_price": "$16",
+                "discount_code": "COTTON20",
+                "promotion_period": "July 1 - July 15"
+            }
+        ]
+    },
+    {
+        "store_information": [
+            {
+                "store_id": "001",
+                "location": "New York, USA",
+                "address": "123 Fashion Street, New York, NY 10001",
+                "contact_number": "+1-800-555-1234",
+                "opening_hours": "Mon-Sat: 10:00 AM - 8:00 PM, Sun: 12:00 PM - 6:00 PM"
+            },
+            {
+                "store_id": "002",
+                "location": "London, UK",
+                "address": "456 Style Avenue, London, W1A 1AA",
+                "contact_number": "+44-20-7946-0958",
+                "opening_hours": "Mon-Fri: 9:00 AM - 7:00 PM, Sat: 10:00 AM - 6:00 PM, Sun: Closed"
+            }
+        ]
+    },
+    {
+        "customer_service": {
+            "phone": {
+                "number": "+1-800-555-1234",
+                "availability": "24/7",
+                "response_time": "Within 24 hours"
+            },
+            "email": {
+                "email": "support@clothingbrand.com",
+                "response_time": "Within 24 hours"
+            }
+        }
+    },
+    {
+        "account_membership": {
+            "account_creation": "Create an account using your email to enjoy exclusive benefits.",
+            "membership_benefits": "Members get early access to sales, special discounts, and free shipping.",
+            "password_reset": "Click 'Forgot Password' on the login page and follow the instructions."
+        }
+    },
+    {
+        "shipping_information": {
+            "standard_shipping": {
+                "cost": "$5",
+                "delivery_time": "5-7 business days"
+            },
+            "express_shipping": {
+                "cost": "$15",
+                "delivery_time": "2-3 business days"
+            },
+            "international_shipping": {
+                "cost": "$25",
+                "delivery_time": "7-14 business days"
+            }
+        }
+    }
+]
+
+text-embedding-3-small
