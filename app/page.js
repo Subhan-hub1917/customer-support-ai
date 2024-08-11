@@ -30,10 +30,10 @@ export default function Home() {
             <img src="/man.png" alt="DEVENGER" className="relative md:absolute md:bottom-0 lg:relative drop-shadow-lg object-fill z-20 w-full" />
             <div className="flex  absolute bottom-10 md:bottom-28 z-30 space-x-2 rounded-full px-3 py-2 border bg-black hover:bg-gray-800 border-white">
               <Link href="/customersupport"><button className="block md:hidden text-white bg-orange-600 text-sm rounded-2xl px-3 py-2">SilkBot<i className="ms-2 bi bi-arrow-up-right"></i></button></Link>
-              <div className="hidden md:block fixed bottom-0 right-0 mb-4 mr-4">
+              <div className="overflow-hidden md:block fixed bottom-0 right-0 mb-4 mr-4">
                 <Chatbox />
               </div>
-              <a href="https://github.com/Subhan-hub1917/customer_support" target="_blank" className="flex items-center">
+              <a href="https://github.com/Subhan-hub1917/customer-support-ai" target="_blank" className="flex items-center">
                 <button className="flex items-center text-white text-sm rounded-2xl px-3 py-2">
                   <img src="/github icon.png" className="w-6 h-6 mr-2 bg-white" alt="GitHub icon" />
                   <span>Github</span>

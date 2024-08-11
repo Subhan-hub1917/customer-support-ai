@@ -221,7 +221,7 @@ const Chatbox = () => {
             {isChatboxOpen && (
                 <div
                     id="chat-container"
-                    className={` fixed bottom-16 right-4 w-96 transition-opacity duration-900  ease-in-out  ${isChatboxOpen ? "opacity-100" : "opacity-0"
+                    className={`absolute  w-screen h-screen top-0 md:fixed md:bottom-16 md:right-4 md:w-96 transition-opacity duration-900  ease-in-out  ${isChatboxOpen ? "opacity-100" : "opacity-0"
                         }`}
                     style={{ visibility: isChatboxOpen ? "visible" : "hidden" }}
                 >
